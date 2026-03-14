@@ -496,11 +496,11 @@ async def mentor_handler(msg: Message):
 async def message_handler(msg: Message):
     T = msg.text.lower() if msg.text else ""
     if T in ('seni kim yaratgan', 'seni kim yasagan'):
-        await msg.answer('🧑‍💻 Meni Asadbek yaratgan!')
+        await msg.answer('🧑‍💻 Meni Jasurbek yaratgan!')
     else:
         await msg.answer(
-            "❓ Kechirasiz, tushunmadim.\n"
-            "Iltimos, quyidagi menyudan foydalaning 👇",
+            f"{msg.from_user.full_name}❓ Kechirasiz, tushunmadim.\n"
+            f"Iltimos, quyidagi menyudan foydalaning 👇",
             reply_markup=Menu
         )
 
